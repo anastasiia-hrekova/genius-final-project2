@@ -1,0 +1,60 @@
+.main-page {
+  width: 100%;
+  @include center;
+  flex-direction: column;
+  margin-top: 100px;
+  height: auto;
+
+  &__block {
+    position: relative;
+    @include center;
+    flex-direction: column;
+    margin-bottom: 253px;
+
+    &::after {
+      display: flex;
+      position: absolute;
+      width: 100vw;
+      height: 720px;
+      background-image: linear-gradient(
+          179.63deg,
+          #1d1d1d 9.82%,
+          rgba(29, 29, 29, 0.820577) 39.19%,
+          rgba(29, 29, 29, 0) 82.56%
+        ),
+        linear-gradient(360deg, #1d1d1d 0%, rgba(29, 29, 29, 0) 44%),
+        url("/images/image.jpg");
+      content:'';
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-family: "Bluu Next Cyrillic", serif;
+    @include text(80px, 700, 1.25);
+    color: var(--accent-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  &__btn {
+    @include size(300px, 60px);
+    align-self: center;
+    border-radius: 100px;
+    background-color: var(--btn-color);
+    color: var(--main-color);
+    font-family: "Bluu Next Cyrillic", serif;
+    @include text(18px, 700, 1.3);
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid var(--btn-color);
+      color: var(--btn-color);
+      transition: 0.6s;
+    }
+  }
+}

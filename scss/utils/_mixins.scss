@@ -1,0 +1,16 @@
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text($size, $weight, $line) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+}
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}

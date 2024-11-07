@@ -1,0 +1,38 @@
+.navigation{
+    @include center;
+    flex-direction: row;
+    gap: 20px;
+    
+    &__card{
+        @include center;
+        flex-direction: column;
+        gap: 20px; 
+        @include size(400px, 479px);
+
+       &-img{
+        @include size(400px, 400px);
+       }
+    }
+
+    &__btn{
+        @include size(320px, 60px);
+        background-color: transparent;
+        border: 1px solid var(--btn-color);
+        border-radius: 100px;
+        color: var(--btn-color);
+        font-family: 'Bluu Next Cyrillic', serif;
+        @include text(18px, 700, 1.3);        
+
+        &:hover{
+          border: none;
+          background-color: var(--btn-color);
+          color: var(--main-color);  
+          transition: 1s;
+        }
+    }
+}
+
+.hidden{
+    display: none;
+    height: 0;
+  }
