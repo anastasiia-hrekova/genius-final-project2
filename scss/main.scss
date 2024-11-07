@@ -4,7 +4,9 @@
 @import './utils/fonts';
 @import './utils/mixins';
 
+@import './components/character';
 @import './components/container';
 @import './components/navigation';
 
+@import './layouts/character-page';
 @import './layouts/main-page';

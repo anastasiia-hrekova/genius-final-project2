@@ -2,6 +2,7 @@
     @include center;
     flex-direction: row;
     gap: 20px;
+    margin-bottom: 100px;
     
     &__card{
         @include center;

@@ -23,7 +23,7 @@
           rgba(29, 29, 29, 0) 82.56%
         ),
         linear-gradient(360deg, #1d1d1d 0%, rgba(29, 29, 29, 0) 44%),
-        url("/images/image.jpg");
+        url("../images/image.jpg");
       content:'';
       background-repeat: no-repeat;
       background-size: cover;
@@ -46,6 +46,7 @@
     align-self: center;
     border-radius: 100px;
     background-color: var(--btn-color);
+    border: none;
     color: var(--main-color);
     font-family: "Bluu Next Cyrillic", serif;
     @include text(18px, 700, 1.3);

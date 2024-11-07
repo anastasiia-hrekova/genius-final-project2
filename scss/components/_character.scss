@@ -1,0 +1,64 @@
+.character{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 295px);
+    grid-template-rows: repeat(2, 452px);
+    gap: 20px;
+
+    &__card{
+        position: relative;
+        border-radius: 20px;
+        background: linear-gradient(360deg, #0F0F0F -0.99%, rgba(15, 15, 15, 0.74) 18.85%, rgba(15, 15, 15, 0) 56.04%);
+        text-align: left;
+    }
+
+    &__img{
+        position: absolute;
+        @include size(295px, 452px);
+        border-radius: 20px;
+        z-index: -2;
+    }
+
+    &__text{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 64%;
+        z-index: 2;
+        padding-left: 20px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    &__name{
+        @include text(26px, 500, 1.4);
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    &__house{
+        @include text(16px, 400, 1.4);
+        color: var(--accent-color);
+        margin-bottom: 15px;
+    }
+
+    &__info{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        @include text(16px, 500, 1.4);
+        color: #fff;
+
+        &-circle{
+            position: absolute;
+            @include size(20px, 20px);
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 50%;
+            transform: translateX(10.4rem);
+            z-index: -1;
+        }
+    }
+}
