@@ -2,8 +2,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 295px);
-    grid-template-rows: repeat(2, 452px);
+    grid-template-rows: repeat(3, 452px);
     gap: 20px;
+    margin-bottom: 100px;
 
     &__card{
         position: relative;
@@ -50,6 +51,9 @@
         gap: 20px;
         @include text(16px, 500, 1.4);
         color: #fff;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
 
         &-circle{
             position: absolute;
