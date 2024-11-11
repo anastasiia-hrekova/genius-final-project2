@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const buttons = document.querySelectorAll('button');
 
+
   const character = character => { // класс для створення карточки персонажа
     const characterCard = document.createElement('div');
-    characterCard.classList.add('character__card');
+    characterCard.classList.add('character__inner');
     characterCard.innerHTML = `
+          <div class="character__front">
           <img class="character__img" src="${character.image}" alt="${character.name}">
           <div class="character__text">
            <h3 class="character__name">${character.name}</h3>
@@ -22,8 +24,30 @@ document.addEventListener('DOMContentLoaded', function () {
                      <i class="fa-solid fa-arrow-right-long fa-lg character__info-arrow" style="color: #ffffff;"></i>
                      <div class="character__info-circle"></div> 
                   </button>
-            </div>
+                  </div>
+            </div>      
+              <div class="character__back">
+                <p class="character__key">Name: <span class="character__key-value">${character.name}</span></p>
+                <p class="character__key">Alternate names: <span class="character__key-value">${character.alternate_names}</span></p>
+                <p class="character__key">Species: <span class="character__key-value">${character.species}</span></p>
+                <p class="character__key">Gend: <span class="character__key-value">${character.gender}</span></p>
+                <p class="character__key">House: <span class="character__key-value">${character.house}</span></p>
+                <p class="character__key">Date of birth: <span class="character__key-value">${character.dateOfBirth}</span></p>
+                <p class="character__key">Year of birth: <span class="character__key-value">${character.yearOfBirth}</span></p>
+                <p class="character__key">Wizard: <span class="character__key-value">${character.wizard}</span></p>
+                <p class="character__key">Ancestry: <span class="character__key-value">${character.ancestry}</span></p>
+                <p class="character__key">Eye colour: <span class="character__key-value">${character.eyeColour}</span></p>
+                <p class="character__key">Hair colour: <span class="character__key-value">${character.hairColour}</span></p>
+                <p class="character__key">Wand: <span class="character__key-value">Wood: ${character.wand.wood}, Core: ${character.wand.core}, Length: ${character.wand.length}</span></p>
+                <p class="character__key">Patronus: <span class="character__key-value">${character.patronus}</span></p>
+                <p class="character__key">Hogwarts students: <span class="character__key-value">${character.hogwartsStudent}</span></p>
+                <p class="character__key">Hogwarts staff: <span class="character__key-value">${character.hogwartsStaff}</span></p>
+                <p class="character__key">Actor: <span class="character__key-value">${character.actor}</span></p>
+                <p class="character__key">Alive: <span class="character__key-value">${character.alive}</span></p>
+               </div>
+            
         `;
+
     charactersContainer.appendChild(characterCard);
   };
 
@@ -41,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(characters => {
 
-      const first8 = characters.slice(0, 12); // для обмеженного виводи карток
+      const first8 = characters.slice(0, 12); // для обмеженного виводи карток, бо більшість незаповнених
 
       first8.forEach(character);
 
